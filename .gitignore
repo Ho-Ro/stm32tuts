@@ -29,3 +29,9 @@
 .settings
 .project
 .cproject
+
+# Backups
+*~
+*.orig
+*.old
+*.new

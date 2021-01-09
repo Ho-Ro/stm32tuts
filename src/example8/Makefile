@@ -14,7 +14,7 @@ LDSCRIPT_INC=../../Device/ldscripts
 OPENOCD_BOARD_DIR=/usr/share/openocd/scripts/board
 
 # Configuration (cfg) file containing programming directives for OpenOCD
-OPENOCD_PROC_FILE=extra/stm32f0-openocd.cfg
+OPENOCD_PROC_FILE=../../extra/stm32f0-openocd.cfg
 
 # that's it, no need to change anything below this line!
 
@@ -82,3 +82,6 @@ clean:
 
 reallyclean: clean
 	$(MAKE) -C $(STD_PERIPH_LIB) clean
+
+flash: proj
+	st-flash --format ihex write main.hex
